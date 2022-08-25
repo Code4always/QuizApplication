@@ -1,0 +1,240 @@
+{
+	"id": "0c7ff2f7-1815-a192-a96f-06b10a0c25f1",
+	"name": "Quiz",
+	"allTests": [],
+	"timestamp": 1653334104905,
+	"collection_id": "a209a874-da44-8a17-9a21-f39a91a1efc7",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "a209a874-da44-8a17-9a21-f39a91a1efc7",
+		"name": "Quiz",
+		"description": "",
+		"order": [
+			"534b870e-f83a-9a97-c20d-658ebc5041fe",
+			"435d2234-b074-afb7-ebb6-b781987f6e89",
+			"2e845891-283e-a222-a3db-a4155ee33b9e"
+		],
+		"folders": [],
+		"folders_order": [],
+		"requests": [
+			{
+				"id": "2e845891-283e-a222-a3db-a4155ee33b9e",
+				"headers": "",
+				"headerData": [],
+				"url": "http://localhost:8080/Quiz-1.0-SNAPSHOT/question",
+				"queryParams": [],
+				"preRequestScript": "",
+				"pathVariables": {},
+				"pathVariableData": [],
+				"method": "GET",
+				"data": [],
+				"dataMode": "params",
+				"version": 2,
+				"tests": "[\"pm.test(\\\"Status code is 200\\\", function () {\\r\",\r\n\"pm.response.to.have.status(200);\\r\",\"});\\r\",\r\n\"\\r\",\r\n\"\\r\",\r\n\"const jsonData = pm.response.json();\\r\",\r\n\"pm.collectionVariables.set(\\\"questionID\\\", jsonData[0].questionID);\\r\"]",
+				"currentHelper": "normal",
+				"helperAttributes": {},
+				"time": 1653334083027,
+				"name": "QuestionByID",
+				"description": "",
+				"collectionId": "a209a874-da44-8a17-9a21-f39a91a1efc7",
+				"responses": []
+			},
+			{
+				"id": "435d2234-b074-afb7-ebb6-b781987f6e89",
+				"headers": "",
+				"headerData": [],
+				"url": "http://localhost:8080/Quiz-1.0-SNAPSHOT/answer",
+				"queryParams": [],
+				"preRequestScript": null,
+				"pathVariables": {},
+				"pathVariableData": [],
+				"method": "GET",
+				"data": null,
+				"dataMode": "params",
+				"tests": " [\r\n\t\t\t\t\t\t\t\t\t\t\t\"pm.test(\\\"Status code is 200\\\", function () {\\r\",\r\n\t\t\t\t\t\t\t\t\t\t\t\"    pm.response.to.have.status(200);\\r\",\r\n\t\t\t\t\t\t\t\t\t\t\t\"});\\r\",\r\n\t\t\t\t\t\t\t\t\t\t\t\"\\r\",\r\n\t\t\t\t\t\t\t\t\t\t\t\"pm.test(\\\"answer is correct\\\", function () {\\r\",\r\n\t\t\t\t\t\t\t\t\t\t\t\"    const jsonData = pm.response.json();\\r\",\r\n\t\t\t\t\t\t\t\t\t\t\t\"\\r\",\r\n\t\t\t\t\t\t\t\t\t\t\t\"    const answer = pm.collectionVariables.get(\\\"answer\\\");\\r\",\r\n\t\t\t\t\t\t\t\t\t\t\t\"    pm.expect(jsonData.answer).to.eql(answer);\\r\",\r\n\t\t\t\t\t\t\t\t\t\t\t\"});\"\r\n\t\t\t\t\t\t\t\t\t\t]",
+				"currentHelper": "normal",
+				"helperAttributes": {},
+				"time": 1653334020924,
+				"name": "GettingAnswer",
+				"description": "",
+				"collectionId": "a209a874-da44-8a17-9a21-f39a91a1efc7",
+				"responses": []
+			},
+			{
+				"id": "534b870e-f83a-9a97-c20d-658ebc5041fe",
+				"headers": "",
+				"headerData": [],
+				"url": "http://localhost:8080/Quiz-1.0-SNAPSHOT/resource",
+				"queryParams": [],
+				"pathVariables": {},
+				"pathVariableData": [],
+				"preRequestScript": "",
+				"method": "GET",
+				"collectionId": "a209a874-da44-8a17-9a21-f39a91a1efc7",
+				"data": [],
+				"dataMode": "params",
+				"name": "CheckStatusByID",
+				"description": "",
+				"descriptionFormat": "html",
+				"time": 1653333619536,
+				"version": 2,
+				"responses": [],
+				"tests": "\"pm.test(\\\"Status code is 200\\\", function () {\\r\",\r\n\"pm.response.to.have.status(200);\\r\",\"});\\r\",\r\n\"\\r\",\r\n\"\\r\",\r\n\"const jsonData = pm.response.json();\\r\",\r\n\"pm.collectionVariables.set(\\\"questionID\\\", jsonData[0].questionID);\\r\"",
+				"currentHelper": "normal",
+				"helperAttributes": {}
+			}
+		],
+		"timestamp": 1653325131193,
+		"synced": false,
+		"syncedFilename": "",
+		"remote_id": 0,
+		"remoteLink": "",
+		"remoteLinkUpdatedAt": null,
+		"public": false,
+		"owner": 0,
+		"subscribed": false,
+		"createdAt": 1653325131193,
+		"updatedAt": 1653333994224,
+		"write": true,
+		"published": false,
+		"favorite": false,
+		"permissions": {},
+		"syncedPermissions": {},
+		"sharedWithTeam": false
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [],
+	"results": [
+		{
+			"id": "534b870e-f83a-9a97-c20d-658ebc5041fe",
+			"name": "CheckStatusByID",
+			"url": "http://localhost:8080/Quiz-1.0-SNAPSHOT/resource",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 0,
+				"name": "",
+				"detail": ""
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4105
+			],
+			"allTests": [
+				{}
+			],
+			"time": 4105,
+			"totalRequestTime": 4105,
+			"iterationResults": {}
+		},
+		{
+			"id": "435d2234-b074-afb7-ebb6-b781987f6e89",
+			"name": "GettingAnswer",
+			"url": "http://localhost:8080/Quiz-1.0-SNAPSHOT/answer",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 0,
+				"name": "",
+				"detail": ""
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				156
+			],
+			"allTests": [
+				{}
+			],
+			"time": 156,
+			"totalRequestTime": 156,
+			"iterationResults": {}
+		},
+		{
+			"id": "2e845891-283e-a222-a3db-a4155ee33b9e",
+			"name": "QuestionByID",
+			"url": "http://localhost:8080/Quiz-1.0-SNAPSHOT/question",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 0,
+				"name": "",
+				"detail": ""
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3935
+			],
+			"allTests": [
+				{}
+			],
+			"time": 3935,
+			"totalRequestTime": 3935,
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 0,
+	"totalFail": 0,
+	"totalTime": 8196,
+	"lifecycle": "done",
+	"willStop": false,
+	"requests": [
+		{
+			"name": "CheckStatusByID",
+			"id": "534b870e-f83a-9a97-c20d-658ebc5041fe",
+			"url": "http://localhost:8080/Quiz-1.0-SNAPSHOT/resource",
+			"time": 4105,
+			"responseCode": {
+				"code": 0,
+				"name": "",
+				"detail": ""
+			},
+			"testPassFailCounts": {},
+			"gridTitles": [],
+			"gridData": [
+				[]
+			],
+			"tests": {}
+		},
+		{
+			"name": "GettingAnswer",
+			"id": "435d2234-b074-afb7-ebb6-b781987f6e89",
+			"url": "http://localhost:8080/Quiz-1.0-SNAPSHOT/answer",
+			"time": 156,
+			"responseCode": {
+				"code": 0,
+				"name": "",
+				"detail": ""
+			},
+			"testPassFailCounts": {},
+			"gridTitles": [],
+			"gridData": [
+				[]
+			],
+			"tests": {}
+		},
+		{
+			"name": "QuestionByID",
+			"id": "2e845891-283e-a222-a3db-a4155ee33b9e",
+			"url": "http://localhost:8080/Quiz-1.0-SNAPSHOT/question",
+			"time": 3935,
+			"responseCode": {
+				"code": 0,
+				"name": "",
+				"detail": ""
+			},
+			"testPassFailCounts": {},
+			"gridTitles": [],
+			"gridData": [
+				[]
+			],
+			"tests": {}
+		}
+	],
+	"synced": false
+}

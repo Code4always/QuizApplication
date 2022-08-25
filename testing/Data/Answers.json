@@ -1,0 +1,17 @@
+[{
+"answerID":0,
+"answerText":"Ein Schloss",
+"correctAnswer":3,
+"possibleAnswer":1
+},{
+  "answerID":1,
+  "answerText":"Drei Schlüssel",
+  "correctAnswer":5,
+  "possibleAnswer":3
+  }
+,{
+  "answerID":2,
+  "answerText":"Ein Berg",
+  "correctAnswer":4,
+  "possibleAnswer":4
+}]
